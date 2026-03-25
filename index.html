@@ -1,0 +1,207 @@
+<!doctype.html>
+   <html lang="en">
+    <head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+ <title>Login</title>
+ <style>
+ * { box-sizing: border-size;}
+ body {
+  background-image: url('Gemini1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;}
+  
+  .form { display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          left: 10%; top: 10%;
+          gap: 10%;
+          border-radius: 10px;
+          border-style: solid;
+          border-color: white;
+          height: 80%;
+          width: 80%;
+          position: relative;
+          backdrop-filter: blur(8px); }
+
+.btn { width: 60%;
+      position: absolute;
+      bottom: 13%; left: 20%;
+      height: 10%;
+      border-style: none;
+      border-radius: 15px;
+      background: orange;
+      cursor: pointer;
+      transition: 0.1s ease;}
+.btn:hover{ background: gray;}
+.btn:active{ background: gray;
+             transform: scale(1.05);
+             box-shadow: 0 0 30px orange;}
+
+.user { width: 80%;
+        height: 5%;
+        margin-left: 10%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background: transparent;
+        border-color: white;
+        outline: none;
+        position: absolute;
+        top: 30%;}
+
+ .user1 { width: 80%;
+        height: 5%;
+        margin-left: 10%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background: transparent;
+        border-color: white;
+        outline: none;
+        position: absolute;
+        bottom: 39%;}
+
+.Email { color: white;
+        position: absolute;
+        top: 25%; left: 10%}
+
+.Pass { color: white;
+       position: absolute;
+       top: 51%; left: 10%;}
+
+h3 { 
+  color: white;
+     font-size: 25px;
+    position: absolute;
+    top: 0%; left: 38%}
+
+.account {color: white;
+    position: absolute;
+    bottom: 1%; left: 21%;
+    font-size: 10px;}
+@media(min-width: 400px) { .account {color: white;
+    position: absolute;
+    bottom: 1%; left: 38%;
+    font-size: 10px;}}
+
+
+
+@media(min-width: 400px) { h3 { color: white;
+     font-size: 25px;
+    position: absolute;
+    top: 0%; left: 46%;}}
+
+.checkbox { position: absolute;
+            bottom: 30%; left: 2%;}
+
+@media(min-width: 400px) { .checkbox { position: absolute;
+  left: 10%;}}
+ 
+ .check { position: absolute; 
+          bottom: 30%; left: 12%;
+          color: white;
+          font-size: 10px; }
+
+/*iphones, ipad*/
+@media (min-width: 400px){ .check {
+      position: absolute;
+      left: 15%;}}
+      
+                  
+      
+a { text-decoration: none;
+    color: orange;
+    margin-left: 5px;
+    font-size: 15px;}
+    
+
+
+/* Disabled */
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+input.valid {
+  border-color: green;}
+
+input.invalid {
+  border-color: red;}
+
+small {
+  color: red;
+  font-size: 12px;
+}
+
+input { color: white;}
+.emailError{ position: absolute;
+            top: 37%; left: 10%;}
+.passwordError{ position: absolute;
+                bottom: 35%; left: 10%;}
+        
+/* Spinner */
+.spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin: auto;
+}
+
+/* Spin animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg); }
+
+
+   
+   
+ </style>
+ </head>
+ <body>
+  
+  <! Form >
+  
+  
+   <form class="form" id="loginForm">
+     <h3>Login</h3>
+
+    <label for="email" class="Email">Email</label>
+     <input type="email" class="user" id="email">
+     <small id="emailError" class="emailError"></small>
+    
+     
+     <label for="password" class="Pass">Password</label>
+     <input type="password" class="user1" id="password">
+     <small id="passwordError" class="passwordError"></small>
+     
+     
+     <label for="checkbox" class="check">Remember me<a href="retrieve.html">Forget Password</a></label>
+     <input type="checkbox" value="yes" class="checkbox" id="checkbox">
+   
+   <button type="submit" class="btn" id="loginBtn"><span id="btnText">Login</span>
+    <span id="spinner" class="spinner"></span></button>
+    
+  <p class="account">Don't have an account<span class="register"><a hr="create.htlm">Register</a></span></p>
+     
+      </form>
+  
+
+   
+   
+   
+   
+   
+   
+   <script src="Login.js"></script>
+ </body>
+ </html>
