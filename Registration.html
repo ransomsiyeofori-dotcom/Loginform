@@ -1,0 +1,176 @@
+<!doctype.html>
+   <html lang="en">
+    <head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.1.0/css/countrySelect.min.css">
+
+ <style>
+ * { box-sizing: border-box;}
+ 
+ body { background: #F4F6F9;
+        overflow-x: hidden;
+        font-family: Iosevka Charon Mono, monospace;}
+
+/* Form */
+
+
+form { display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-content: center;
+       gap: 20px;
+       border-radius: 15px;
+       border-color: gray;
+       border-style: solid;
+       border-width: 0.5px;
+       width: 90%;
+       position: relative;
+       margin-left: 17px;
+       background: #FFFFFF;
+       box-shadow: 0 0 10px gray;
+       padding-top: 80px;
+       padding-bottom: 50px;
+       padding-left: 20px;
+       padding-right: 20px;}
+@media(min-width: 400px) { form {margin-left: 35px;}}
+       
+  h2 {  position: absolute;
+      top: 0%; left: 36%;
+       color: navy;}
+@media(min-width: 400px) { h2 { position: absolute;
+      top: 0%; left: 35%;
+       color: navy;}}
+       
+
+       
+.checkbox { position: absolute;
+            bottom: 20%;}
+            
+.enter { height: 50px;
+         width: 100%;
+         border-style: solid;
+         border-width: 0.5px;
+         border-color: gray;
+         border-radius: 10px;
+         outline: none;
+         box-shadow: 0 0 5px gray;}
+
+label { color: navy;}
+
+
+.terms { margin-left: 10%;
+        margin-top: 14px;}
+@media(min-width: 400px) { .terms { margin-left: 5%;
+        margin-bottom: 20px;}}
+@media(min-width: 768px){ .terms { 
+         margin-left: 2%;
+        margin-bottom: 20px;}}
+
+
+.btn { height: 50px;
+       border-style: none;
+       background: orange;
+       border-radius: 10px;
+       transition: 0.5s ease;}
+@media(min-width: 400px) { .btn { height: 50px;
+       border-style: none;
+       background: orange;
+       border-radius: 10px;
+       transition: 0.5s ease;
+       margin-bottom: 30px;}}
+       
+.btn:hover { background: darkorange;
+             box-shadow: 0 0 20px darkorange;}
+
+.btn:active { background: darkorange;
+              transform: scale(1.05);}
+
+a { text-decoration: none;
+    color: darkorange;
+    font-size: 15px;
+}
+
+.account { font-size: 10px;
+           margin-left: 55px;
+          margin-bottom: 5px;}
+  
+@media(min-width: 400px) { .account {font-size: 10px;
+          position: absolute;
+          left: 20%; bottom: 3%; }}
+/* Desktop */
+@media(min-width: 768px){ .account { 
+     position: absolute;
+     left: 35%;}}
+          
+  .error {
+  color: red;
+  font-size: 12px;}
+
+           
+             
+             
+
+
+             
+
+  
+  
+     
+  
+</style>
+  </head>
+ <body>
+  
+  <form id="signupForm">
+    <h2>Sign Up</h2>
+
+<label for="Full name">Full name</label>
+<input type="text" id="fullname" class="enter" placeholder="Enter your full name">
+<small class="error" id="nameError"></small>
+
+
+<label for="Email">Email</label>
+<input type="email" id="email" class="enter" placeholder="Enter your Email">
+<small class="error" id="emailError"></small>
+
+
+<label for="country">Country</label>
+<input type="text" id="country" class="enter"/>
+<small class="error" id="countryError"></small>
+
+
+<label for="password">Password</label>
+<input type="password" id="password" class="enter" placeholder="Enter your password"><small class="error" id="passwordError"></small>
+
+<label for="Confirm password">Confirm Password</label>
+<input type="password" id="confirmPassword" placeholder="Confirm Password" class="enter" />
+  <small class="error" id="confirmError"></small>
+
+  
+  <label for="checkbox" class="terms" >I agree to terms</label>
+  <input type="checkbox" id="terms" value="yes" class="checkbox">
+  <small class="error" id="termsError"></small>
+  
+
+ <button type="submit" id="btn" class="btn">Sign Up</button>
+ <p class="account">Already have an account? <span><a href="Login.html">Login</a></span></p>
+
+
+
+    
+ 
+
+
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.1.0/js/countrySelect.min.js"></script>
+<script src="Register.js"></script>
+  
+ </body>
+ </html>
