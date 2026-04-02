@@ -1,0 +1,146 @@
+<!doctype.html>
+   <html lang="en">
+    <head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+ <title>Forgot Password</title>
+ <style>
+ 
+ * { box-sizing: border-box;}
+ body { background-color: #E5E7E9;
+         overflow-x: hidden;
+        margin: 0px;
+         font-family: Iosevka Charon Mono, monospace;
+          color: #1B263B; }
+
+ form { display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      gap: 0px;
+       background: #F8F9FA;
+       border-style: none;
+       height: 500px;
+       margin-top: 80px;
+       border-radius: 15px;
+       box-shadow: 0 0 15px gray;
+       width: 80%;
+       margin-left: 10%;
+       position: relative;}
+
+input { width: 80%;
+         margin-left: 10%;
+         height: 50px;
+         border-style: solid;
+         border-radius: 10px;
+         border-width: 0.5px;
+         border-color: #1B263B;
+         outline: none;}
+
+button { width: 80%;
+         margin-left: 10%;
+         height: 40px;
+         background: #CC5500;
+         border-style: none;
+         border-width: 0.5px;
+         border-radius: 10px;
+         color: white;
+         margin-top: 10px;}
+
+button:hover { background: gray;}
+button:active { transform: scale(1.05);
+                box-shadow: 0 0 15px   #CC5500;}
+
+label { margin-left: 30px;
+        position: absolute;
+        bottom: 40%;}
+/* ipad */
+@media(min-width: 768px){
+  
+  label { margin-left: 80px;
+          position: absolute;
+          bottom: 48%;}}
+        
+a { text-align: center;
+    text-decoration: none;
+    margin-top: 20px;}
+    
+.container { margin-left: 30px;
+             margin-bottom:40px;}
+
+.text { font-size: 15px;
+        position: relative;
+        left:10%; bottom: 2%;
+        }
+
+       
+        </style>
+ </head>
+ <body>
+   
+  
+
+
+    
+
+  <form id="myForm">
+    <div class="container">
+     <h1>Forgot your password</h1><br>
+    
+    <p>Please enter the email address you'd like your password reset information sent to </p><br>
+    </div>
+<label for="email">Enter email address</label>
+<input type="email" placeholder="email"
+id="email" class="email" />
+<p id="text" class="text"></p>
+
+
+<button type="submit" id="btn">Request reset link</button>
+      <a href="Login.html">Back To Login</a>
+    
+  
+  </form>
+   
+   
+   <script>
+const input = document.getElementById("email");
+const btn = document.getElementById("btn");
+const form = document.getElementById("myForm");
+const text = document.getElementById("text");
+const count = document.getElementById("count");
+
+input.addEventListener("input", function(){ const inputValue = input.value.trim();
+if (inputValue.length === 0){input.style.border = "2px solid red";}
+else if (!inputValue.includes("@") || 
+        !inputValue.includes("."))
+        {text.style.color = "red";
+          text.textContent = "missing @ or .";}
+
+else { input.style.border = "2px solid green";
+   text.style.color = "green"
+       text.textContent = "Good!";
+       }
+});
+
+
+// final validation //
+form.addEventListener("submit", function(e){e.preventDefault();
+
+const inputValue = input.value.trim();
+
+if ( inputValue.includes("@") &&
+     inputValue.includes(".") &&
+     inputValue !== ""){ alert("Link has been sent to your email");}
+ 
+  else { alert("field must be filled correctly");}
+console.log("submitted");
+});
+     
+   </script>
+   
+ </body>
+ </html>
